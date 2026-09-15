@@ -20,3 +20,15 @@ function reset(){
     count = 0;
     updateCounter();
 }
+
+function savecount(){
+    localStorage.setItem("count",count);
+}
+
+function loadCount(){
+    let saved = localStorage.getItem("count");
+    if(saved != null){
+        count = saved;
+    }
+    updateCounter();
+}
